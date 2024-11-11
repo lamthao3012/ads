@@ -740,6 +740,7 @@ function VibeteksAdsenseFirstView(_adClient, _adSlot, _adSize = [300, 600]) {
         $(".Vibeteks-firstview-close").hide();
         clearInterval(interval);
     }
+    
     if(++timer > 600) {
       clearInterval(interval);
     }
