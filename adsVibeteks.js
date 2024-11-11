@@ -718,9 +718,7 @@ function VibeteksAdsenseFirstView(_adClient, _adSlot, _adSize = [300, 600]) {
      </ins>
     </div>`;
   document.body.insertAdjacentHTML("beforeend", html);
-
   (adsbygoogle = window.adsbygoogle || []).push({});
-
   document.body.querySelector('.Vibeteks-firstview-close').addEventListener("click", function () {
     document.body.querySelector('.Vibeteks-firstview').style.display = "none";
   });
@@ -740,7 +738,6 @@ function VibeteksAdsenseFirstView(_adClient, _adSlot, _adSize = [300, 600]) {
         $(".Vibeteks-firstview-close").hide();
         clearInterval(interval);
     }
-    
     if(++timer > 600) {
       clearInterval(interval);
     }
