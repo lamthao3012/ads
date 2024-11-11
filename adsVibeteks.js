@@ -734,7 +734,7 @@ function VibeteksAdsenseFirstView(_adClient, _adSlot, _adSize = [300, 600]) {
 
       clearInterval(interval);
     }
-    else if (adStatus1 === "filled") 
+    else if (ads.getAttribute("data-ad-status") === "unfilled") 
     {
         $(".Vibeteks-firstview").hide();
         clearInterval(interval);
