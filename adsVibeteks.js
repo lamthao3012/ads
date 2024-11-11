@@ -727,8 +727,8 @@ function VibeteksAdsenseFirstView(_adClient, _adSlot, _adSize = [300, 600]) {
 
   var timer = 0
   var interval = setInterval(() => {
-    var ads = document.querySelector(".Vibeteks-firstview ins");
-    if (ads && ads.getAttribute("data-ad-status") == "filled") {
+    var ads = document.querySelector(`.adsbygoogle[data-ad-slot="${_adSlot}"]`);
+    if (ads && ads.getAttribute("data-ad-status") === "filled") {
       document.body.querySelector('.Vibeteks-firstview').style.visibility = "visible";
       document.body.querySelector('.Vibeteks-firstview-close').style.display = "block";
 
@@ -737,6 +737,7 @@ function VibeteksAdsenseFirstView(_adClient, _adSlot, _adSize = [300, 600]) {
     else if (ads.getAttribute("data-ad-status") === "unfilled") 
     {
         $(".Vibeteks-firstview").hide();
+        $(".Vibeteks-firstview-close").hide();
         clearInterval(interval);
     }
 
