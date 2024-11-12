@@ -729,7 +729,6 @@ function VibeteksAdsenseFirstView(_adClient, _adSlot, _adSize = [300, 600]) {
     if (ads && ads.getAttribute("data-ad-status") === "filled") {
       document.body.querySelector('.Vibeteks-firstview').style.visibility = "visible";
       document.body.querySelector('.Vibeteks-firstview-close').style.display = "block";
-
       clearInterval(interval);
     }
     else if (ads.getAttribute("data-ad-status") === "unfilled") 
